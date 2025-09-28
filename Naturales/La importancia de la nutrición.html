@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>La importancia de la nutrición - 6º Primaria</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f9f7f0;
+      color: #333;
+      line-height: 1.6;
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    h1 {
+      color: #006064;
+      font-size: 2.2rem;
+      text-align: center;
+      margin-bottom: 15px;
+    }
+    h2 {
+      color: #00796b;
+      margin-bottom: 15px;
+      font-size: 1.6rem;
+    }
+    h3 {
+      color: #00796b;
+      margin: 15px 0 10px;
+      font-size: 1.3rem;
+    }
+    .bloque {
+      background-color: white;
+      padding: 20px;
+      margin-bottom: 30px;
+      border-radius: 12px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    .solution {
+      display: none;
+      margin-top: 10px;
+      font-style: italic;
+      color: #546e7a;
+      background-color: #f1f8e9;
+      padding: 12px;
+      border-left: 4px solid #388e3c;
+      border-radius: 4px;
+    }
+    button {
+      background-color: #4caf50;
+      color: white;
+      border: none;
+      padding: 8px 16px;
+      margin-top: 10px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+    button:hover {
+      background-color: #388e3c;
+    }
+    input[type="text"] {
+      padding: 8px;
+      font-size: 1rem;
+      border: 2px solid #b2dfdb;
+      border-radius: 6px;
+      width: 180px;
+      text-align: center;
+    }
+    .tabla {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 15px 0;
+    }
+    .tabla th, .tabla td {
+      border: 1px solid #90a4ae;
+      padding: 10px;
+      text-align: center;
+    }
+    .tabla th {
+      background-color: #b2dfdb;
+      color: #004d40;
+    }
+    .correcto {
+      color: #2e7d32;
+      font-weight: bold;
+    }
+    .incorrecto {
+      color: #c62828;
+      font-weight: bold;
+    }
+    .instruccion {
+      font-style: italic;
+      color: #546e7a;
+      margin-top: 8px;
+      font-size: 0.95rem;
+    }
+    ul, ol {
+      padding-left: 20px;
+      margin: 12px 0;
+    }
+    li {
+      margin-bottom: 8px;
+    }
+    code {
+      background-color: #e0f2f1;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-family: monospace;
+    }
+    .video-responsive {
+      position: relative;
+      overflow: hidden;
+      width: 100%;
+      padding-bottom: 56.25%;
+      height: 0;
+      margin: 20px 0;
+    }
+    .video-responsive iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+    @media (max-width: 600px) {
+      input[type="text"] {
+        width: 120px;
+      }
+      h1 {
+        font-size: 1.8rem;
+      }
+      h2 {
+        font-size: 1.4rem;
+      }
+    }
+    .volver-indice {
+      display: inline-block;
+      background-color: #00796b;
+      color: white;
+      text-decoration: none;
+      padding: 8px 16px;
+      border-radius: 6px;
+      font-weight: bold;
+      margin-top: 10px;
+      font-size: 0.95rem;
+    }
+    .volver-indice:hover {
+      background-color: #004d40;
+    }
+    .header-button {
+      text-align: center;
+      margin-top: 12px;
+    }
+    .footer-button {
+      text-align: center;
+      margin-top: 30px;
+      padding-top: 20px;
+      border-top: 1px solid #eee;
+    }
+  </style>
+</head>
+<body>
+  <h1>🍎 La importancia de la nutrición</h1>
+  <p style="text-align: center; margin-bottom: 30px;">Material interactivo para 6.º de Primaria — ¡Aprende cómo tu cuerpo se alimenta!</p>
+  
+  <div class="header-button">
+    <a href="Índice Naturales.html" class="volver-indice">← Volver al índice</a>
+  </div>
+
+  <!-- BLOQUE 1: ¿Qué es la nutrición? -->
+  <div class="bloque">
+    <h2>1. ¿Qué es la nutrición?</h2>
+    <p>La <strong>nutrición</strong> es el conjunto de procesos mediante los que nuestro cuerpo obtiene <strong>materia</strong> y <strong>energía</strong> de los alimentos para crecer, moverse, pensar y mantenerse sano.</p>
+    <p>Estos procesos son:</p>
+    <ul>
+      <li><strong>Digestión</strong>: transformar los alimentos en nutrientes.</li>
+      <li><strong>Respiración</strong>: tomar oxígeno del aire.</li>
+      <li><strong>Circulación</strong>: repartir nutrientes y oxígeno por todo el cuerpo.</li>
+      <li><strong>Excreción</strong>: eliminar los desechos.</li>
+    </ul>
+    <p>⚠️ ¡Sin nutrición no podríamos vivir!</p>
+  </div>
+
+  <!-- BLOQUE 2: Los nutrientes -->
+  <div class="bloque">
+    <h2>2. Los nutrientes y sus funciones</h2>
+    <p>Los <strong>nutrientes</strong> son sustancias que contienen los alimentos y que nuestro cuerpo necesita. Se clasifican en:</p>
+    <ul>
+      <li><strong>Hidratos de carbono</strong>: dan energía rápida (pan, pasta, fruta).</li>
+      <li><strong>Lípidos (grasas)</strong>: dan energía lenta y duradera (aceite, frutos secos).</li>
+      <li><strong>Proteínas</strong>: construyen y reparan tejidos (carne, pescado, legumbres).</li>
+      <li><strong>Vitaminas y sales minerales</strong>: regulan el funcionamiento del cuerpo (frutas, verduras).</li>
+      <li><strong>Agua</strong>: transporta nutrientes y elimina desechos.</li>
+      <li><strong>Fibra</strong>: ayuda a la digestión (verduras, cereales integrales).</li>
+    </ul>
+    <h3>Tipos de alimentos según su función</h3>
+    <ul>
+      <li><strong>Energéticos</strong>: ricos en hidratos y grasas.</li>
+      <li><strong>Constructores</strong>: ricos en proteínas.</li>
+      <li><strong>Reguladores</strong>: ricos en vitaminas y minerales.</li>
+    </ul>
+  </div>
+
+  <!-- BLOQUE 3: Aparatos de la nutrición -->
+  <div class="bloque">
+    <h2>3. Aparatos que intervienen en la nutrición</h2>
+    <table class="tabla">
+      <tr><th>Proceso</th><th>Aparato</th><th>Órganos principales</th></tr>
+      <tr><td>Digestión</td><td>Digestivo</td><td>Boca, estómago, intestinos, hígado, páncreas</td></tr>
+      <tr><td>Respiración</td><td>Respiratorio</td><td>Pulmones, tráquea, bronquios</td></tr>
+      <tr><td>Circulación</td><td>Circulatorio</td><td>Corazón, arterias, venas, capilares</td></tr>
+      <tr><td>Excreción</td><td>Excretor</td><td>Riñones, vejiga, glándulas sudoríparas</td></tr>
+    </table>
+    <p>✅ Todos estos aparatos trabajan juntos para que tu cuerpo funcione correctamente.</p>
+  </div>
+
+  <!-- BLOQUE 4: Alimentación saludable -->
+  <div class="bloque">
+    <h2>4. Alimentación saludable y sostenible</h2>
+    <p>Una alimentación <strong>saludable</strong> debe ser:</p>
+    <ul>
+      <li><strong>Equilibrada</strong>: con todos los nutrientes.</li>
+      <li><strong>Variada</strong>: muchos colores y tipos de alimentos.</li>
+      <li><strong>Adecuada</strong>: según la edad, actividad y salud.</li>
+    </ul>
+    <p>Una alimentación <strong>sostenible</strong> cuida el planeta:</p>
+    <ul>
+      <li>Consume más alimentos vegetales.</li>
+      <li>Elige productos de temporada y locales.</li>
+      <li>Evita el desperdicio de alimentos.</li>
+    </ul>
+    <p>✅ La <strong>dieta mediterránea</strong> es un ejemplo perfecto de ambas.</p>
+  </div>
+
+  <!-- BLOQUE 5: Ejercicio - Verdadero o falso -->
+  <div class="bloque">
+    <h2>5. Verdadero o falso</h2>
+    <p>a) Las proteínas sirven para dar energía rápida → <button onclick="toggleSol('sol5a')">Mostrar</button></p>
+    <div id="sol5a" class="solution">Falso. Las proteínas sirven para construir y reparar tejidos.</div>
+    <p>b) El aparato circulatorio reparte nutrientes y oxígeno → <button onclick="toggleSol('sol5b')">Mostrar</button></p>
+    <div id="sol5b" class="solution">Verdadero</div>
+    <p>c) La fibra se digiere y aporta mucha energía → <button onclick="toggleSol('sol5c')">Mostrar</button></p>
+    <div id="sol5c" class="solution">Falso. La fibra no se digiere, pero ayuda a la digestión.</div>
+  </div>
+
+  <!-- BLOQUE 6: Ejercicio - Clasifica alimentos -->
+  <div class="bloque">
+    <h2>6. Clasifica estos alimentos</h2>
+    <p>Indica si son <strong>energéticos (E)</strong>, <strong>constructores (C)</strong> o <strong>reguladores (R)</strong>:</p>
+    <p>a) Lentejas → <input type="text" id="alim1" maxlength="1">  
+       b) Manzana → <input type="text" id="alim2" maxlength="1">  
+       c) Aceite → <input type="text" id="alim3" maxlength="1"></p>
+    <button onclick="corregirAlimentos()">Corregir</button>
+    <div id="resAlim" style="margin-top:10px;"></div>
+  </div>
+
+  <!-- BLOQUE 7: Resumen en vídeo -->
+  <div class="bloque">
+    <h2>7. Vídeo resumen:</h2>
+    <div class="video-responsive">
+      <!-- Aquí puedes insertar un enlace real a un vídeo educativo de YouTube o similar -->
+      <iframe width="640" height="360" frameborder="0" src="https://mega.nz/embed/I4QxjZQT#afcfL4NIcK_10dZPF2zHIz20Geute1CNxplm4MV4OSg" allowfullscreen ></iframe>
+
+    </div>
+    <h3>Audio resumen (opcional):</h3>
+    <iframe width="640" height="360" frameborder="0" src="https://mega.nz/embed/JxRxiTZb#SqhuOIfC9qIctDsG77BSSkGLTHyOvOiWB0Yv7K-V0xU" allowfullscreen ></iframe>
+<iframe width="640" height="360" frameborder="0" src="https://mega.nz/embed/9ghjQKYa#gX3jJB67eJXGfKPEYVDsp211rBQ5x2S6dcG212Nax8c" allowfullscreen ></iframe>
+
+  </div>
+
+  <div class="footer-button">
+    <a href="Índice Naturales.html" class="volver-indice">← Volver al índice</a>
+  </div>
+
+  <script>
+    function toggleSol(id) {
+      const el = document.getElementById(id);
+      el.style.display = el.style.display === 'block' ? 'none' : 'block';
+    }
+
+    function corregirAlimentos() {
+      const a = document.getElementById('alim1').value.trim().toUpperCase();
+      const b = document.getElementById('alim2').value.trim().toUpperCase();
+      const c = document.getElementById('alim3').value.trim().toUpperCase();
+      let msg = '';
+      if (a === 'C') msg += '<p class="correcto">a) ✅ Lentejas → Constructores (proteínas vegetales)</p>';
+      else msg += '<p class="incorrecto">a) ❌ Las lentejas son ricas en proteínas → Constructores (C)</p>';
+      if (b === 'R') msg += '<p class="correcto">b) ✅ Manzana → Reguladora (vitaminas)</p>';
+      else msg += '<p class="incorrecto">b) ❌ La manzana tiene vitaminas y fibra → Reguladora (R)</p>';
+      if (c === 'E') msg += '<p class="correcto">c) ✅ Aceite → Energético (grasas)</p>';
+      else msg += '<p class="incorrecto">c) ❌ El aceite aporta grasas → Energético (E)</p>';
+      document.getElementById('resAlim').innerHTML = msg;
+    }
+  </script>
+</body>
+</html>

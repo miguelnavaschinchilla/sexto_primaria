@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Potencias y Raíces - 6º Primaria</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f9f7f0;
+      color: #333;
+      line-height: 1.6;
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    h1 {
+      color: #006064;
+      font-size: 2.2rem;
+      text-align: center;
+      margin-bottom: 15px;
+    }
+    h2 {
+      color: #00796b;
+      margin-bottom: 15px;
+      font-size: 1.6rem;
+    }
+    h3 {
+      color: #00796b;
+      margin: 15px 0 10px;
+      font-size: 1.3rem;
+    }
+    .bloque {
+      background-color: white;
+      padding: 20px;
+      margin-bottom: 30px;
+      border-radius: 12px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    .solution {
+      display: none;
+      margin-top: 10px;
+      font-style: italic;
+      color: #546e7a;
+      background-color: #f1f8e9;
+      padding: 12px;
+      border-left: 4px solid #388e3c;
+      border-radius: 4px;
+    }
+    button {
+      background-color: #4caf50;
+      color: white;
+      border: none;
+      padding: 8px 16px;
+      margin-top: 10px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+    button:hover {
+      background-color: #388e3c;
+    }
+    input[type="text"] {
+      padding: 8px;
+      font-size: 1rem;
+      border: 2px solid #b2dfdb;
+      border-radius: 6px;
+      width: 180px;
+      text-align: center;
+    }
+    .tabla {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 15px 0;
+    }
+    .tabla th, .tabla td {
+      border: 1px solid #90a4ae;
+      padding: 10px;
+      text-align: center;
+    }
+    .tabla th {
+      background-color: #b2dfdb;
+      color: #004d40;
+    }
+    .correcto {
+      color: #2e7d32;
+      font-weight: bold;
+    }
+    .incorrecto {
+      color: #c62828;
+      font-weight: bold;
+    }
+    .instruccion {
+      font-style: italic;
+      color: #546e7a;
+      margin-top: 8px;
+      font-size: 0.95rem;
+    }
+    ul, ol {
+      padding-left: 20px;
+      margin: 12px 0;
+    }
+    li {
+      margin-bottom: 8px;
+    }
+    code {
+      background-color: #e0f2f1;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-family: monospace;
+    }
+    .video-responsive {
+      position: relative;
+      overflow: hidden;
+      width: 100%;
+      padding-bottom: 56.25%;
+      height: 0;
+      margin: 20px 0;
+    }
+    .video-responsive iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+    @media (max-width: 600px) {
+      input[type="text"] {
+        width: 120px;
+      }
+      h1 {
+        font-size: 1.8rem;
+      }
+      h2 {
+        font-size: 1.4rem;
+      }
+    }
+.volver-indice {
+  display: inline-block;
+  background-color: #00796b;
+  color: white;
+  text-decoration: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-weight: bold;
+  margin-top: 10px;
+  font-size: 0.95rem;
+}
+.volver-indice:hover {
+  background-color: #004d40;
+}
+.header-button {
+  text-align: center;
+  margin-top: 12px;
+}
+.footer-button {
+  text-align: center;
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 1px solid #eee;
+}
+  </style>
+</head>
+<body>
+  <h1>🔢 Potencias y Raíces Cuadradas</h1>
+  <p style="text-align: center; margin-bottom: 30px;">Material interactivo para 6.º de Primaria — ¡Piensa, escribe y comprueba!</p>
+<div class="header-button">
+  <a href="Ìndice Matemáticas.html" class="volver-indice">← Volver al índice</a>
+</div>
+
+  <!-- BLOQUE 1: ¿Qué es una potencia? -->
+  <div class="bloque">
+    <h2>1. ¿Qué es una potencia?</h2>
+    <p>Una <strong>potencia</strong> es una forma abreviada de escribir un producto de factores iguales.</p>
+    <p>Ejemplo: <code>3 × 3 × 3 × 3 = 3⁴</code></p>
+    <ul>
+      <li><strong>Base</strong>: el número que se repite.</li>
+      <li><strong>Exponente</strong>: las veces que se repite.</li>
+    </ul>
+  </div>
+
+  <!-- BLOQUE 2: Números especiales -->
+  <div class="bloque">
+    <h2>2. Números especiales en potencias</h2>
+    <p>Algunas potencias tienen reglas especiales:</p>
+    <ul>
+      <li>Cualquier número elevado a <strong>1</strong> es el mismo número: <code>7¹ = 7</code></li>
+      <li>Cualquier número (distinto de 0) elevado a <strong>0</strong> es <strong>1</strong>: <code>9⁰ = 1</code></li>
+      <li>El número <strong>1</strong> elevado a cualquier exponente siempre es <strong>1</strong>: <code>1⁵ = 1</code></li>
+      <li>El número <strong>0</strong> elevado a un exponente mayor que 0 es <strong>0</strong>: <code>0⁴ = 0</code></li>
+    </ul>
+    <p>⚠️ <code>0⁰</code> no está definido en primaria.</p>
+    <h3>¿Verdadero o falso?</h3>
+    <p>a) 5⁰ = 0 → <button onclick="toggleSol('sol2a')">Mostrar</button></p>
+    <div id="sol2a" class="solution">Falso. 5⁰ = 1</div>
+    <p>b) 12¹ = 12 → <button onclick="toggleSol('sol2b')">Mostrar</button></p>
+    <div id="sol2b" class="solution">Verdadero</div>
+  </div>
+
+  <!-- BLOQUE 3: Cuadrados y cubos -->
+  <div class="bloque">
+    <h2>3. Cuadrados y cubos</h2>
+    <p>• Exponente 2 → <strong>cuadrado</strong>: 5² = 25</p>
+    <p>• Exponente 3 → <strong>cubo</strong>: 4³ = 64</p>
+    <h3>Tabla de cuadrados perfectos (1 al 10)</h3>
+    <table class="tabla">
+      <tr><th>n</th><th>n²</th><th>n³</th></tr>
+      <tr><td>1</td><td>1</td><td>1</td></tr>
+      <tr><td>2</td><td>4</td><td>8</td></tr>
+      <tr><td>3</td><td>9</td><td>27</td></tr>
+      <tr><td>4</td><td>16</td><td>64</td></tr>
+      <tr><td>5</td><td>25</td><td>125</td></tr>
+      <tr><td>6</td><td>36</td><td>216</td></tr>
+      <tr><td>7</td><td>49</td><td>343</td></tr>
+      <tr><td>8</td><td>64</td><td>512</td></tr>
+      <tr><td>9</td><td>81</td><td>729</td></tr>
+      <tr><td>10</td><td>100</td><td>1000</td></tr>
+    </table>
+  </div>
+
+  <!-- BLOQUE 4: Potencias de base 10 -->
+  <div class="bloque">
+    <h2>4. Potencias de base 10</h2>
+    <p>Una potencia de base 10 es un 1 seguido de tantos ceros como indique el exponente:</p>
+    <ul>
+      <li>10² = 100</li>
+      <li>10⁵ = 100 000</li>
+    </ul>
+  </div>
+
+  <!-- BLOQUE 5: Expresión polinómica -->
+  <div class="bloque">
+    <h2>5. Expresión polinómica de un número</h2>
+    <p>Podemos descomponer cualquier número usando <strong>potencias de base 10</strong>.</p>
+    <p><strong>Ejemplo:</strong> 27.069 = 2×10⁴ + 7×10³ + 6×10 + 9</p>
+    <h3>Valor posicional</h3>
+    <table class="tabla">
+      <tr><th>DM (10⁴)</th><th>UM (10³)</th><th>C (10²)</th><th>D (10¹)</th><th>U (10⁰)</th></tr>
+      <tr><td>2</td><td>7</td><td>0</td><td>6</td><td>9</td></tr>
+    </table>
+  </div>
+
+  <!-- BLOQUE 6: Ejercicio expresión polinómica -->
+  <div class="bloque">
+    <h2>6. Practica: Expresión polinómica</h2>
+    <p>Escribe la expresión polinómica del número 4.507:</p>
+    <input type="text" id="poly">
+    <div class="instruccion">Escribe sin espacios. Usa ^ para los exponentes y x o * para multiplicar.</div>
+    <button onclick="corregirPoly()">Corregir</button>
+    <div id="resPoly" style="margin-top:10px;"></div>
+  </div>
+
+  <!-- BLOQUE 7: Ejercicio potencias -->
+  <div class="bloque">
+    <h2>7. Practica: Escribe como potencia</h2>
+    <p>Escribe cada producto usando potencias:</p>
+    <p>a) 2 × 2 × 2 = <input type="text" id="e1a">  
+       b) 7 × 7 = <input type="text" id="e1b">  
+       c) 10 × 10 × 10 × 10 = <input type="text" id="e1c"></p>
+    <button onclick="corregirEj1()">Corregir</button>
+    <div id="resEj1" style="margin-top:10px;"></div>
+  </div>
+
+  <!-- BLOQUE 8: Raíz cuadrada -->
+  <div class="bloque">
+    <h2>8. ¿Qué es la raíz cuadrada?</h2>
+    <p>La <strong>raíz cuadrada</strong> de un número es otro número que, multiplicado por sí mismo, da el primero.</p>
+    <p>Ejemplo: √25 = 5, porque 5 × 5 = 25.</p>
+    <p>✅ Solo los <strong>cuadrados perfectos</strong> tienen raíz exacta.</p>
+  </div>
+
+  <!-- BLOQUE 9: Ejercicio raíces -->
+  <div class="bloque">
+    <h2>9. Raíces: ¿Exactas o no?</h2>
+    <p>Indica el valor si es exacta, o escribe "no" si no lo es:</p>
+    <p>a) √36 = <input type="text" id="r1a">  
+       b) √50 = <input type="text" id="r1b">  
+       c) √81 = <input type="text" id="r1c"></p>
+    <button onclick="corregirRaices()">Corregir</button>
+    <div id="resRaices" style="margin-top:10px;"></div>
+  </div>
+
+  <!-- BLOQUE 10: Vídeo resumen -->
+  <div class="bloque">
+    <h2>10. Vídeo resumen:</h2>
+    <div class="video-responsive">
+      <iframe src="https://mega.nz/embed/p9x0gCyQ#99AYoyO0UO6YKMU_iSicjUDl5jGPRDssQvmnHJSunjA" allowfullscreen></iframe>
+    </div>
+    <h2>10.1 Audio resumen:</h2>
+    <div class="video-responsive">
+      <iframe src="https://mega.nz/embed/EopHQZAK#pCSroHacw_zn6KBxyl4LSJyq-SvYHNH7YJhhSaPCWFg" allowfullscreen></iframe>
+    </div>
+  </div>
+<div class="footer-button">
+  <a href="Ìndice Matemáticas.html" class="volver-indice">← Volver al índice</a>
+</div>
+
+  <!-- SCRIPTS (sin cambios) -->
+  <script>
+    function toggleSol(id) {
+      const el = document.getElementById(id);
+      el.style.display = el.style.display === 'block' ? 'none' : 'block';
+    }
+    function corregirPoly() {
+      const resp = document.getElementById('poly').value.trim().replace(/\s/g, '').toLowerCase();
+      const formas = [
+        '4x10^3+5x10^2+7',
+        '4*10^3+5*10^2+7',
+        '4×10³+5×10²+7',
+        '4x10^3+5x10^2+0x10+7',
+        '4*10^3+5*10^2+0*10+7'
+      ];
+      const normalizar = s => s.replace(/×|x|\*/g, 'x').replace(/\^/g, '^').replace(/[⁰¹²³⁴⁵⁶⁷⁸⁹]/g, d => ['⁰','¹','²','³','⁴','⁵','⁶','⁷','⁸','⁹'].indexOf(d).toString());
+      const div = document.getElementById('resPoly');
+      if (formas.some(f => normalizar(resp) === normalizar(f))) {
+        div.innerHTML = '<p class="correcto">✅ ¡Correcto!</p>';
+      } else {
+        div.innerHTML = '<p class="incorrecto">❌ Revisa la descomposición: 4.507 = 4×10³ + 5×10² + 0×10 + 7</p>';
+      }
+    }
+    function corregirEj1() {
+      const a = document.getElementById('e1a').value.trim().replace(/\s/g, '').toLowerCase();
+      const b = document.getElementById('e1b').value.trim().replace(/\s/g, '').toLowerCase();
+      const c = document.getElementById('e1c').value.trim().replace(/\s/g, '').toLowerCase();
+      let msg = '';
+      if (['2^3','2³','23'].includes(a)) msg += '<p class="correcto">a) ✅</p>';
+      else msg += '<p class="incorrecto">a) ❌ ¿Cuántas veces se repite el 2?</p>';
+      if (['7^2','7²','72'].includes(b)) msg += '<p class="correcto">b) ✅</p>';
+      else msg += '<p class="incorrecto">b) ❌ ¿Cuántas veces se repite el 7?</p>';
+      if (['10^4','10⁴','104'].includes(c)) msg += '<p class="correcto">c) ✅</p>';
+      else msg += '<p class="incorrecto">c) ❌ ¿Cuántas veces se repite el 10?</p>';
+      document.getElementById('resEj1').innerHTML = msg;
+    }
+    function corregirRaices() {
+      const a = document.getElementById('r1a').value.trim().toLowerCase();
+      const b = document.getElementById('r1b').value.trim().toLowerCase();
+      const c = document.getElementById('r1c').value.trim().toLowerCase();
+      let msg = '';
+      if (a === '6') msg += '<p class="correcto">a) ✅</p>';
+      else msg += '<p class="incorrecto">a) ❌ ¿Qué número al cuadrado da 36?</p>';
+      if (b === 'no') msg += '<p class="correcto">b) ✅</p>';
+      else msg += '<p class="incorrecto">b) ❌ 50 no es un cuadrado perfecto → escribe "no"</p>';
+      if (c === '9') msg += '<p class="correcto">c) ✅</p>';
+      else msg += '<p class="incorrecto">c) ❌ ¿Qué número al cuadrado da 81?</p>';
+      document.getElementById('resRaices').innerHTML = msg;
+    }
+  </script>
+</body>
+</html>

@@ -170,7 +170,6 @@
 <body>
   <h1>🍎 La importancia de la nutrición</h1>
   <p style="text-align: center; margin-bottom: 30px;">Material interactivo para 6.º de Primaria — ¡Aprende cómo tu cuerpo se alimenta!</p>
-  
   <div class="header-button">
     <a href="Índice Naturales.html" class="volver-indice">← Volver al índice</a>
     <a href="Nut_examen.html" class="volver-indice">👉 Ir al examen</a>
@@ -223,9 +222,22 @@
     <p>✅ Todos estos aparatos trabajan juntos para que tu cuerpo funcione correctamente.</p>
   </div>
 
-  <!-- BLOQUE 4: Alimentación saludable -->
+  <!-- BLOQUE 4: La sangre -->
   <div class="bloque">
-    <h2>4. Alimentación saludable y sostenible</h2>
+    <h2>4. La sangre: transporte y defensa</h2>
+    <p>La sangre es un líquido rojo que circula por todo el cuerpo y es esencial para la vida. Está formada por:</p>
+    <ul>
+      <li><strong>Plasma</strong>: líquido amarillento que transporta nutrientes, hormonas, medicinas y desechos.</li>
+      <li><strong>Glóbulos rojos</strong>: transportan oxígeno desde los pulmones al resto del cuerpo. Son los más abundantes.</li>
+      <li><strong>Glóbulos blancos</strong>: defienden el cuerpo contra infecciones y microbios.</li>
+      <li><strong>Plaquetas</strong>: las más pequeñas; ayudan a coagular la sangre cuando nos herimos.</li>
+    </ul>
+    <p>💡 Todas estas células se fabrican en la <strong>médula ósea</strong> (dentro de los huesos). ¡En un niño de 10-12 años, se fabrican <strong>90.000 millones de glóbulos rojos al día</strong>!</p>
+  </div>
+
+  <!-- BLOQUE 5: Alimentación saludable y sostenible -->
+  <div class="bloque">
+    <h2>5. Alimentación saludable y sostenible</h2>
     <p>Una alimentación <strong>saludable</strong> debe ser:</p>
     <ul>
       <li><strong>Equilibrada</strong>: con todos los nutrientes.</li>
@@ -241,20 +253,22 @@
     <p>✅ La <strong>dieta mediterránea</strong> es un ejemplo perfecto de ambas.</p>
   </div>
 
-  <!-- BLOQUE 5: Ejercicio - Verdadero o falso -->
+  <!-- BLOQUE 6: Ejercicio - Verdadero o falso (actualizado) -->
   <div class="bloque">
-    <h2>5. Verdadero o falso</h2>
-    <p>a) Las proteínas sirven para dar energía rápida → <button onclick="toggleSol('sol5a')">Mostrar</button></p>
-    <div id="sol5a" class="solution">Falso. Las proteínas sirven para construir y reparar tejidos.</div>
-    <p>b) El aparato circulatorio reparte nutrientes y oxígeno → <button onclick="toggleSol('sol5b')">Mostrar</button></p>
-    <div id="sol5b" class="solution">Verdadero</div>
-    <p>c) La fibra se digiere y aporta mucha energía → <button onclick="toggleSol('sol5c')">Mostrar</button></p>
-    <div id="sol5c" class="solution">Falso. La fibra no se digiere, pero ayuda a la digestión.</div>
+    <h2>6. Verdadero o falso</h2>
+    <p>a) Las plaquetas evitan que nos desangremos → <button onclick="toggleSol('sol6a')">Mostrar</button></p>
+    <div id="sol6a" class="solution">Verdadero</div>
+    <p>b) El plasma es un componente sólido de la sangre → <button onclick="toggleSol('sol6b')">Mostrar</button></p>
+    <div id="sol6b" class="solution">Falso. El plasma es líquido y de color amarillento.</div>
+    <p>c) La fibra se digiere y aporta mucha energía → <button onclick="toggleSol('sol6c')">Mostrar</button></p>
+    <div id="sol6c" class="solution">Falso. La fibra no se digiere, pero ayuda a la digestión.</div>
+    <p>d) Los glóbulos blancos transportan oxígeno → <button onclick="toggleSol('sol6d')">Mostrar</button></p>
+    <div id="sol6d" class="solution">Falso. Son los glóbulos rojos los que transportan oxígeno.</div>
   </div>
 
-  <!-- BLOQUE 6: Ejercicio - Clasifica alimentos -->
+  <!-- BLOQUE 7: Ejercicio - Clasifica alimentos (actualizado) -->
   <div class="bloque">
-    <h2>6. Clasifica estos alimentos</h2>
+    <h2>7. Clasifica estos alimentos</h2>
     <p>Indica si son <strong>energéticos (E)</strong>, <strong>constructores (C)</strong> o <strong>reguladores (R)</strong>:</p>
     <p>a) Lentejas → <input type="text" id="alim1" maxlength="1">  
        b) Manzana → <input type="text" id="alim2" maxlength="1">  
@@ -263,20 +277,27 @@
     <div id="resAlim" style="margin-top:10px;"></div>
   </div>
 
-  <!-- BLOQUE 7: Resumen en vídeo -->
+  <!-- BLOQUE 8: Nuevo ejercicio - Componentes de la sangre -->
   <div class="bloque">
-    <h2>7. Vídeo resumen:</h2>
+    <h2>8. ¿Qué componente de la sangre es?</h2>
+    <p>a) Transporta oxígeno → <input type="text" id="sang1" maxlength="15">  
+       b) Defiende contra infecciones → <input type="text" id="sang2" maxlength="15">  
+       c) Ayuda a coagular → <input type="text" id="sang3" maxlength="15"></p>
+    <div class="instruccion">Escribe: "glóbulos rojos", "glóbulos blancos" o "plaquetas"</div>
+    <button onclick="corregirSangre()">Corregir</button>
+    <div id="resSangre" style="margin-top:10px;"></div>
+  </div>
+
+  <!-- BLOQUE 9: Resumen en vídeo -->
+  <div class="bloque">
+    <h2>9. Vídeo resumen:</h2>
     <div class="video-responsive">
-      <!-- Aquí puedes insertar un enlace real a un vídeo educativo de YouTube o similar -->
-      <iframe width="640" height="360" frameborder="0" src="https://mega.nz/embed/I4QxjZQT#afcfL4NIcK_10dZPF2zHIz20Geute1CNxplm4MV4OSg" allowfullscreen ></iframe>
+      <iframe width="640" height="360" frameborder="0" src="https://mega.nz/embed/I4QxjZQT#afcfL4NIcK_10dZPF2zHIz20Geute1CNxplm4MV4OSg" allowfullscreen></iframe>
     </div>
-    <h3>Audio resumen (opcional):</h3>
-<div class="video-responsive">
-    <iframe width="640" height="360" frameborder="0" src="https://mega.nz/embed/JxRxiTZb#SqhuOIfC9qIctDsG77BSSkGLTHyOvOiWB0Yv7K-V0xU" allowfullscreen ></iframe>
+    <h3>Audio resumen:</h3>
+    <div class="video-responsive">
+      <iframe width="640" height="360" frameborder="0" src="https://mega.nz/embed/JxRxiTZb#SqhuOIfC9qIctDsG77BSSkGLTHyOvOiWB0Yv7K-V0xU" allowfullscreen></iframe>
     </div>
-<div class="video-responsive">
-<iframe width="640" height="360" frameborder="0" src="https://mega.nz/embed/9ghjQKYa#gX3jJB67eJXGfKPEYVDsp211rBQ5x2S6dcG212Nax8c" allowfullscreen ></iframe>
-</div>
   </div>
 
   <div class="footer-button">
@@ -302,6 +323,20 @@
       if (c === 'E') msg += '<p class="correcto">c) ✅ Aceite → Energético (grasas)</p>';
       else msg += '<p class="incorrecto">c) ❌ El aceite aporta grasas → Energético (E)</p>';
       document.getElementById('resAlim').innerHTML = msg;
+    }
+
+    function corregirSangre() {
+      const a = document.getElementById('sang1').value.trim().toLowerCase();
+      const b = document.getElementById('sang2').value.trim().toLowerCase();
+      const c = document.getElementById('sang3').value.trim().toLowerCase();
+      let msg = '';
+      if (['glóbulos rojos', 'globulos rojos'].includes(a)) msg += '<p class="correcto">a) ✅ Glóbulos rojos</p>';
+      else msg += '<p class="incorrecto">a) ❌ Transportan oxígeno → glóbulos rojos</p>';
+      if (['glóbulos blancos', 'globulos blancos'].includes(b)) msg += '<p class="correcto">b) ✅ Glóbulos blancos</p>';
+      else msg += '<p class="incorrecto">b) ❌ Defienden contra infecciones → glóbulos blancos</p>';
+      if (['plaquetas'].includes(c)) msg += '<p class="correcto">c) ✅ Plaquetas</p>';
+      else msg += '<p class="incorrecto">c) ❌ Ayudan a coagular → plaquetas</p>';
+      document.getElementById('resSangre').innerHTML = msg;
     }
   </script>
 </body>

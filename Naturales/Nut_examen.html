@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Examen: La importancia de la nutrición</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f9f7f0;
+      color: #333;
+      line-height: 1.6;
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    h1 {
+      color: #006064;
+      font-size: 2.2rem;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .pregunta {
+      background-color: white;
+      padding: 20px;
+      margin-bottom: 20px;
+      border-radius: 12px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    .pregunta h3 {
+      margin-bottom: 12px;
+      color: #00796b;
+    }
+    .opciones {
+      margin-left: 20px;
+    }
+    .opciones label {
+      display: block;
+      margin: 8px 0;
+      cursor: pointer;
+    }
+    input[type="radio"], input[type="checkbox"] {
+      margin-right: 8px;
+    }
+    input[type="text"] {
+      padding: 8px;
+      font-size: 1rem;
+      border: 2px solid #b2dfdb;
+      border-radius: 6px;
+      width: 150px;
+      text-align: center;
+    }
+    button {
+      background-color: #4caf50;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      margin-top: 15px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+    button:hover {
+      background-color: #388e3c;
+    }
+    .boton-azul {
+      background-color: #2196f3;
+      color: white;
+      text-decoration: none;
+      display: inline-block;
+      padding: 10px 20px;
+      border-radius: 6px;
+      margin-top: 15px;
+      font-size: 1rem;
+    }
+    .boton-azul:hover {
+      background-color: #0b7dda;
+    }
+    .resultado {
+      background-color: white;
+      padding: 20px;
+      margin-top: 30px;
+      border-radius: 12px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      display: none;
+    }
+    .nota {
+      font-size: 1.4rem;
+      font-weight: bold;
+      margin-bottom: 15px;
+      color: #00796b;
+    }
+    .acertadas, .erradas {
+      margin: 10px 0;
+    }
+    .correcto {
+      color: #2e7d32;
+      font-weight: bold;
+    }
+    .incorrecto {
+      color: #c62828;
+      font-weight: bold;
+    }
+    .explicacion {
+      font-style: italic;
+      color: #546e7a;
+      margin-top: 4px;
+      display: block;
+    }
+    .botones-finales {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+      margin-top: 20px;
+    }
+    @media (max-width: 600px) {
+      .botones-finales {
+        flex-direction: column;
+      }
+      button, .boton-azul {
+        width: 100%;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>📝 Examen: La importancia de la nutrición</h1>
+  <p style="text-align: center; margin-bottom: 25px;">20 preguntas — ¡Demuestra lo que sabes!</p>
+
+  <form id="examen">
+    <!-- Preguntas -->
+    <div class="pregunta">
+      <h3>1. ¿Qué es la nutrición?</h3>
+      <div class="opciones">
+        <label><input type="radio" name="q1" value="a"> Comer muchos dulces</label>
+        <label><input type="radio" name="q1" value="b"> El conjunto de procesos para obtener materia y energía de los alimentos</label>
+        <label><input type="radio" name="q1" value="c"> Beber solo agua</label>
+        <label><input type="radio" name="q1" value="d"> Dormir bien</label>
+      </div>
+    </div>
+
+    <div class="pregunta">
+      <h3>2. ¿Cuál de estos NO es un nutriente?</h3>
+      <div class="opciones">
+        <label><input type="radio" name="q2" value="a"> Proteínas</label>
+        <label><input type="radio" name="q2" value="b"> Vitaminas</label>
+        <label><input type="radio" name="q2" value="c"> Azúcar refinado</label>
+        <label><input type="radio" name="q2" value="d"> Agua</label>
+      </div>
+    </div>
+
+    <div class="pregunta">
+      <h3>3. Los glóbulos rojos transportan...</h3>
+      <div class="opciones">
+        <label><input type="radio" name="q3" value="a"> Dióxido de carbono</label>
+        <label><input type="radio" name="q3" value="b"> Oxígeno</label>
+        <label><input type="radio" name="q3" value="c"> Glucosa</label>
+        <label><input type="radio" name="q3" value="d"> Vitaminas</label>
+      </div>
+    </div>
+
+    <div class="pregunta">
+      <h3>4. ¿Dónde se produce la digestión de los alimentos?</h3>
+      <div class="opciones">
+        <label><input type="radio" name="q4" value="a"> En el corazón</label>
+        <label><input type="radio" name="q4" value="b"> En el aparato digestivo</label>
+        <label><input type="radio" name="q4" value="c"> En los pulmones</label>
+        <label><input type="radio" name="q4" value="d"> En la piel</label>
+      </div>
+    </div>
+
+    <div class="pregunta">
+      <h3>5. Verdadero o falso: Las plaquetas ayudan a que la sangre se coagule.</h3>
+      <div class="opciones">
+        <label><input type="radio" name="q5" value="a"> Verdadero</label>
+        <label><input type="radio" name="q5" value="b"> Falso</label>
+      </div>
+    </div>
+
+    <div class="pregunta">
+      <h3>6. ¿Qué aparato se encarga de eliminar los desechos como la orina?</h3>
+      <div class="opciones">
+        <label><input type="radio" name="q6" value="a"> Aparato digestivo</label>
+        <label><input type="radio" name="q6" value="b"> Aparato excretor</label>
+        <label><input type="radio" name="q6" value="c"> Aparato respiratorio</label>
+        <label><input type="radio" name="q6" value="d"> Aparato locomotor</label>
+      </div>
+    </div>
+
+    <div class="pregunta">
+      <h3>7. ¿Qué nutriente es fundamental para construir músculos?</h3>
+      <div class="opciones">
+        <label><input type="radio" name="q7" value="a"> Hidratos de carbono</label>
+        <label><input type="radio" name="q7" value="b"> Lípidos</label>
+        <label><input type="radio" name="q7" value="c"> Proteínas</label>
+        <label><input type="radio" name="q7" value="d"> Fibra</label>
+      </div>
+    </div>
+
+    <div class="pregunta">
+      <h3>8. ¿Dónde se fabrican las células sanguíneas?</h3>
+      <input type="text" name="q8" placeholder="Escribe aquí">
+    </div>
+
+    <div class="pregunta">
+      <h3>9. ¿Qué gas tomamos del aire al respirar?</h3>
+      <div class="opciones">
+        <label><input type="radio" name="q9" value="a"> Dióxido de carbono</label>
+        <label><input type="radio" name="q9" value="b"> Nitrógeno</label>
+        <label><input type="radio" name="q9" value="c"> Oxígeno</label>
+        <label><input type="radio" name="q9" value="d"> Hidrógeno</label>
+      </div>
+    </div>
+
+    <div class="pregunta">
+      <h3>10. Verdadero o falso: La fibra se digiere y aporta mucha energía.</h3>
+      <div class="opciones">
+        <label><input type="radio" name="q10" value="a"> Verdadero</label>
+        <label><input type="radio" name="q10" value="b"> Falso</label>
+      </div>
+    </div>
+
+    <div class="pregunta">
+      <h3>11. ¿Qué tipo de alimentos son las frutas y verduras principalmente?</h3>
+      <div class="opciones">
+        <label><input type="radio" name="q11" value="a"> Energéticos</label>
+        <label><input type="radio" name="q11" value="b"> Constructores</label>
+        <label><input type="radio" name="q11" value="c"> Reguladores</label>
+        <label><input type="radio" name="q11" value="d"> Grasos</label>
+      </div>
+    </div>
+
+    <div class="pregunta">
+      <h3>12. ¿Qué componente de la sangre lucha contra las infecciones?</h3>
+      <div class="opciones">
+        <label><input type="radio" name="q12" value="a"> Glóbulos rojos</label>
+        <label><input type="radio" name="q12" value="b"> Plasma</label>
+        <label><input type="radio" name="q12" value="c"> Glóbulos blancos</label>
+        <label><input type="radio" name="q12" value="d"> Plaquetas</label>
+      </div>
+    </div>
+
+    <div class="pregunta">
+      <h3>13. ¿Qué aparato transporta nutrientes y oxígeno por todo el cuerpo?</h3>
+      <div class="opciones">
+        <label><input type="radio" name="q13" value="a"> Aparato respiratorio</label>
+        <label><input type="radio" name="q13" value="b"> Aparato circulatorio</label>
+        <label><input type="radio" name="q13" value="c"> Aparato digestivo</label>
+        <label><input type="radio" name="q13" value="d"> Aparato excretor</label>
+      </div>
+    </div>
+
+    <div class="pregunta">
+      <h3>14. ¿Qué nombre recibe el líquido amarillento de la sangre?</h3>
+      <input type="text" name="q14" placeholder="Escribe aquí">
+    </div>
+
+    <div class="pregunta">
+      <h3>15. ¿Cuántos glóbulos rojos fabrica la médula ósea al día en un niño de 10-12 años?</h3>
+      <div class="opciones">
+        <label><input type="radio" name="q15" value="a"> 9 millones</label>
+        <label><input type="radio" name="q15" value="b"> 90.000 millones</label>
+        <label><input type="radio" name="q15" value="c"> 900 millones</label>
+        <label><input type="radio" name="q15" value="d"> 900.000 millones</label>
+      </div>
+    </div>
+
+    <div class="pregunta">
+      <h3>16. ¿Qué proceso transforma los alimentos en nutrientes?</h3>
+      <div class="opciones">
+        <label><input type="radio" name="q16" value="a"> Respiración</label>
+        <label><input type="radio" name="q16" value="b"> Digestión</label>
+        <label><input type="radio" name="q16" value="c"> Circulación</label>
+        <label><input type="radio" name="q16" value="d"> Excreción</label>
+      </div>
+    </div>
+
+    <div class="pregunta">
+      <h3>17. Verdadero o falso: El agua no es un nutriente.</h3>
+      <div class="opciones">
+        <label><input type="radio" name="q17" value="a"> Verdadero</label>
+        <label><input type="radio" name="q17" value="b"> Falso</label>
+      </div>
+    </div>
+
+    <div class="pregunta">
+      <h3>18. ¿Qué parte del aparato digestivo absorbe los nutrientes?</h3>
+      <div class="opciones">
+        <label><input type="radio" name="q18" value="a"> Estómago</label>
+        <label><input type="radio" name="q18" value="b"> Intestino delgado</label>
+        <label><input type="radio" name="q18" value="c"> Boca</label>
+        <label><input type="radio" name="q18" value="d"> Esófago</label>
+      </div>
+    </div>
+
+    <div class="pregunta">
+      <h3>19. ¿Qué dieta se considera saludable y sostenible en el Mediterráneo?</h3>
+      <input type="text" name="q19" placeholder="Escribe aquí">
+    </div>
+
+    <div class="pregunta">
+      <h3>20. ¿Qué eliminamos al exhalar?</h3>
+      <div class="opciones">
+        <label><input type="radio" name="q20" value="a"> Oxígeno</label>
+        <label><input type="radio" name="q20" value="b"> Dióxido de carbono</label>
+        <label><input type="radio" name="q20" value="c"> Agua</label>
+        <label><input type="radio" name="q20" value="d"> Nutrientes</label>
+      </div>
+    </div>
+
+    <button type="button" onclick="corregirExamen()">Corregir examen</button>
+    <div class="botones-finales">
+      <a href="La importancia de la nutrición.html" class="boton-azul">← Volver al tema</a>
+      <a href="Índice Naturales.html" class="boton-azul">← Volver al índice</a>
+    </div>
+  </form>
+
+  <div id="resultado" class="resultado"></div>
+
+  <script>
+    function corregirExamen() {
+      const respuestas = {
+        q1: 'b',
+        q2: 'c',
+        q3: 'b',
+        q4: 'b',
+        q5: 'a',
+        q6: 'b',
+        q7: 'c',
+        q8: 'médula ósea',
+        q9: 'c',
+        q10: 'b',
+        q11: 'c',
+        q12: 'c',
+        q13: 'b',
+        q14: 'plasma',
+        q15: 'b',
+        q16: 'b',
+        q17: 'b',
+        q18: 'b',
+        q19: 'dieta mediterránea',
+        q20: 'b'
+      };
+
+      const explicaciones = {
+        q1: "La nutrición es el conjunto de procesos para obtener materia y energía de los alimentos.",
+        q2: "El azúcar refinado es un alimento procesado, no un nutriente básico como proteínas, vitaminas, agua, etc.",
+        q3: "Los glóbulos rojos transportan oxígeno desde los pulmones al resto del cuerpo.",
+        q4: "La digestión ocurre en el aparato digestivo (boca, estómago, intestinos...).",
+        q5: "Las plaquetas ayudan a coagular la sangre y evitar hemorragias.",
+        q6: "El aparato excretor (riñones, vejiga...) elimina orina y otros desechos.",
+        q7: "Las proteínas son esenciales para construir y reparar tejidos como los músculos.",
+        q8: "Las células sanguíneas se fabrican en la médula ósea, dentro de los huesos.",
+        q9: "Al respirar tomamos oxígeno del aire.",
+        q10: "La fibra no se digiere, pero ayuda al tránsito intestinal.",
+        q11: "Frutas y verduras son reguladores: aportan vitaminas y minerales.",
+        q12: "Los glóbulos blancos defienden el cuerpo contra infecciones.",
+        q13: "El aparato circulatorio (corazón, sangre, vasos) transporta nutrientes y oxígeno.",
+        q14: "El plasma es la parte líquida amarillenta de la sangre.",
+        q15: "La médula ósea fabrica unos 90.000 millones de glóbulos rojos al día en niños.",
+        q16: "La digestión transforma los alimentos en nutrientes absorbibles.",
+        q17: "El agua sí es un nutriente esencial.",
+        q18: "El intestino delgado es donde se absorben los nutrientes.",
+        q19: "La dieta mediterránea es saludable y sostenible: rica en vegetales, aceite de oliva, pescado...",
+        q20: "Al exhalar eliminamos dióxido de carbono, producto de la respiración celular."
+      };
+
+      let aciertos = 0;
+      let acertadas = [];
+      let erradas = [];
+
+      // Corregir preguntas tipo radio
+      for (let i = 1; i <= 20; i++) {
+        if (i === 8 || i === 14 || i === 19) continue;
+        const selected = document.querySelector(`input[name="q${i}"]:checked`);
+        const userAnswer = selected ? selected.value : null;
+        if (userAnswer === respuestas[`q${i}`]) {
+          aciertos++;
+          acertadas.push(i);
+        } else {
+          erradas.push(i);
+        }
+      }
+
+      // Corregir preguntas de texto
+      const q8 = document.querySelector('input[name="q8"]').value.trim().toLowerCase();
+      if (q8 === 'médula ósea' || q8 === 'medula osea') {
+        aciertos++;
+        acertadas.push(8);
+      } else {
+        erradas.push(8);
+      }
+
+      const q14 = document.querySelector('input[name="q14"]').value.trim().toLowerCase();
+      if (q14 === 'plasma') {
+        aciertos++;
+        acertadas.push(14);
+      } else {
+        erradas.push(14);
+      }
+
+      const q19 = document.querySelector('input[name="q19"]').value.trim().toLowerCase();
+      if (q19 === 'dieta mediterránea' || q19 === 'dieta mediterranea') {
+        aciertos++;
+        acertadas.push(19);
+      } else {
+        erradas.push(19);
+      }
+
+      const nota = (aciertos * 10) / 20;
+
+      let html = `<div class="nota">Tu nota: <strong>${nota.toFixed(1)}/10</strong></div>`;
+      
+      if (acertadas.length > 0) {
+        html += `<div class="acertadas"><span class="correcto">✅ Preguntas acertadas:</span> ${acertadas.join(', ')}</div>`;
+      }
+      
+      if (erradas.length > 0) {
+        html += `<div class="erradas"><span class="incorrecto">❌ Preguntas erradas:</span></div><ul>`;
+        erradas.forEach(num => {
+          const correcta = respuestas[`q${num}`];
+          const exp = explicaciones[`q${num}`];
+          let textoCorrecto = correcta;
+          if (num === 8) textoCorrecto = "médula ósea";
+          if (num === 14) textoCorrecto = "plasma";
+          if (num === 19) textoCorrecto = "dieta mediterránea";
+          html += `<li><strong>Pregunta ${num}:</strong> La respuesta correcta es <em>"${textoCorrecto}"</em>.<br><span class="explicacion">${exp}</span></li>`;
+        });
+        html += `</ul>`;
+      }
+
+      document.getElementById('resultado').innerHTML = html;
+      document.getElementById('resultado').style.display = 'block';
+    }
+  </script>
+</body>
+</html>

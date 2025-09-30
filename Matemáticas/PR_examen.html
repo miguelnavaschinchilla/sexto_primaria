@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Examen: Potencias y Raíces - 6º Primaria</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva,Verdana, sans-serif;
+      background-color: #f5f7fa;
+      color: #333;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    h1 {
+      text-align: center;
+      color: #2c3e50;
+    }
+    .pregunta {
+      background: white;
+      padding: 15px;
+      margin-bottom: 15px;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    }
+    .pregunta h3 {
+      margin-top: 0;
+      color: #3498db;
+    }
+    input[type="text"], select {
+      padding: 6px;
+      margin: 4px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      width: 100px;
+    }
+    button {
+      display: block;
+      margin: 30px auto;
+      padding: 12px 30px;
+      font-size: 18px;
+      background: #27ae60;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #219653;
+    }
+    #resultado {
+      text-align: center;
+      font-size: 24px;
+      font-weight: bold;
+      margin-top: 20px;
+      padding: 15px;
+      border-radius: 8px;
+      display: none;
+    }
+    #detalles {
+      margin-top: 20px;
+      display: none;
+    }
+    .correcto { color: green; font-weight: bold; }
+    .incorrecto { color: red; font-weight: bold; }
+    .detalle-item {
+      padding: 8px;
+      border-bottom: 1px solid #eee;
+    }
+  </style>
+</head>
+<body>
+
+<h1>📝 Examen: Potencias y Raíces</h1>
+<p>Responde las 20 preguntas. Al final, haz clic en <strong>Corregir examen</strong>.</p>
+
+<form id="examen">
+  <!-- Preguntas (igual que antes) -->
+  <div class="pregunta"><h3>1. ¿Cómo se escribe 5 × 5 × 5 en forma de potencia?</h3>
+    <label><input type="radio" name="p1" value="a"> 5 × 3</label><br>
+    <label><input type="radio" name="p1" value="b"> 3⁵</label><br>
+    <label><input type="radio" name="p1" value="c"> 5³</label><br>
+    <label><input type="radio" name="p1" value="d"> 5²</label>
+  </div>
+
+  <div class="pregunta"><h3>2. ¿Cuál es la base en la potencia 7⁴?</h3>
+    <label><input type="radio" name="p2" value="a"> 4</label><br>
+    <label><input type="radio" name="p2" value="b"> 7</label><br>
+    <label><input type="radio" name="p2" value="c"> 74</label><br>
+    <label><input type="radio" name="p2" value="d"> 28</label>
+  </div>
+
+  <div class="pregunta"><h3>3. ¿Cuánto vale 10⁵?</h3>
+    <label><input type="radio" name="p3" value="a"> 100</label><br>
+    <label><input type="radio" name="p3" value="b"> 1.000</label><br>
+    <label><input type="radio" name="p3" value="c"> 10.000</label><br>
+    <label><input type="radio" name="p3" value="d"> 100.000</label>
+  </div>
+
+  <div class="pregunta"><h3>4. ¿Cuál es la raíz cuadrada de 64?</h3>
+    <input type="text" name="p4" placeholder="Número">
+  </div>
+
+  <div class="pregunta"><h3>5. ¿Verdadero o falso? Cualquier número elevado a 0 es 0.</h3>
+    <label><input type="radio" name="p5" value="verdadero"> Verdadero</label><br>
+    <label><input type="radio" name="p5" value="falso"> Falso</label>
+  </div>
+
+  <div class="pregunta"><h3>6. ¿Cuánto vale 9²?</h3>
+    <input type="text" name="p6" placeholder="Número">
+  </div>
+
+  <div class="pregunta"><h3>7. ¿Qué número elevado al cuadrado da 81?</h3>
+    <input type="text" name="p7" placeholder="Número">
+  </div>
+
+  <div class="pregunta"><h3>8. ¿Cuál es la expresión polinómica de 3.050?</h3>
+    <label><input type="radio" name="p8" value="a"> 3×10³ + 5×10²</label><br>
+    <label><input type="radio" name="p8" value="b"> 3×10³ + 5×10</label><br>
+    <label><input type="radio" name="p8" value="c"> 3×10² + 5×10</label><br>
+    <label><input type="radio" name="p8" value="d"> 3×10³ + 5</label>
+  </div>
+
+  <div class="pregunta"><h3>9. ¿Cuánto vale 1¹⁰?</h3>
+    <input type="text" name="p9" placeholder="Número">
+  </div>
+
+  <div class="pregunta"><h3>10. ¿Cuánto vale 0⁵?</h3>
+    <input type="text" name="p10" placeholder="Número">
+  </div>
+
+  <div class="pregunta"><h3>11. ¿Cuál es el valor de 2³ × 2²?</h3>
+    <label><input type="radio" name="p11" value="a"> 2⁵</label><br>
+    <label><input type="radio" name="p11" value="b"> 2⁶</label><br>
+    <label><input type="radio" name="p11" value="c"> 4⁵</label><br>
+    <label><input type="radio" name="p11" value="d"> 64</label>
+  </div>
+
+  <div class="pregunta"><h3>12. ¿Cuál es la raíz cuadrada aproximada de 50?</h3>
+    <label><input type="radio" name="p12" value="a"> 6</label><br>
+    <label><input type="radio" name="p12" value="b"> 7</label><br>
+    <label><input type="radio" name="p12" value="c"> 8</label><br>
+    <label><input type="radio" name="p12" value="d"> 5</label>
+  </div>
+
+  <div class="pregunta"><h3>13. ¿Cuántos cuadrados perfectos hay entre 1 y 100 (incluidos)?</h3>
+    <input type="text" name="p13" placeholder="Número">
+  </div>
+
+  <div class="pregunta"><h3>14. ¿Cuál es el resultado de 4³?</h3>
+    <input type="text" name="p14" placeholder="Número">
+  </div>
+
+  <div class="pregunta"><h3>15. ¿Verdadero o falso? La raíz cuadrada de 0 es 0.</h3>
+    <label><input type="radio" name="p15" value="verdadero"> Verdadero</label><br>
+    <label><input type="radio" name="p15" value="falso"> Falso</label>
+  </div>
+
+  <div class="pregunta"><h3>16. Escribe 700.000 como potencia de base 10:</h3>
+    <label><input type="radio" name="p16" value="a"> 7×10⁵</label><br>
+    <label><input type="radio" name="p16" value="b"> 7×10⁶</label><br>
+    <label><input type="radio" name="p16" value="c"> 70×10⁴</label><br>
+    <label><input type="radio" name="p16" value="d"> 700×10³</label>
+  </div>
+
+  <div class="pregunta"><h3>17. ¿Cuánto vale 5⁰ + 5¹?</h3>
+    <input type="text" name="p17" placeholder="Número">
+  </div>
+
+  <div class="pregunta"><h3>18. ¿Cuál es la expresión polinómica de 209.506?</h3>
+    <label><input type="radio" name="p18" value="a"> 2×10⁵ + 9×10³ + 5×10² + 6</label><br>
+    <label><input type="radio" name="p18" value="b"> 2×10⁶ + 9×10⁴ + 5×10² + 6</label><br>
+    <label><input type="radio" name="p18" value="c"> 2×10⁵ + 9×10⁴ + 5×10² + 6</label><br>
+    <label><input type="radio" name="p18" value="d"> 2×10⁵ + 9×10³ + 5×10 + 6</label>
+  </div>
+
+  <div class="pregunta"><h3>19. ¿Cuántas baldosas hay en una cocina cuadrada si en cada lado hay 12?</h3>
+    <input type="text" name="p19" placeholder="Número">
+  </div>
+
+  <div class="pregunta"><h3>20. ¿Entre qué dos números enteros está la raíz cuadrada de 75?</h3>
+    <label><input type="radio" name="p20" value="a"> 7 y 8</label><br>
+    <label><input type="radio" name="p20" value="b"> 8 y 9</label><br>
+    <label><input type="radio" name="p20" value="c"> 9 y 10</label><br>
+    <label><input type="radio" name="p20" value="d"> 6 y 7</label>
+  </div>
+
+<div style="text-align: center; margin: 30px 0; display: flex; justify-content: center; gap: 12px; flex-wrap: wrap;">
+  <button type="button" onclick="corregirExamen()">Corregir examen</button>
+  <a href="Potencias y raíces.html"
+     style="display: inline-block; background-color: #039be5; color: white; text-decoration: none; padding: 10px 20px; border-radius: 6px; font-weight: bold; text-align: center;">
+    📖 Volver al tema
+  </a>
+  <a href="Ìndice Matemáticas.html"
+     style="display: inline-block; background-color: #2196f3; color: white; text-decoration: none; padding: 10px 20px; border-radius: 6px; font-weight: bold; text-align: center;">
+    📚 Ir al índice
+  </a>
+</div>
+</form>
+
+<div id="resultado"></div>
+<div id="detalles"></div>
+
+<script>
+  function corregirExamen() {
+    const respuestas = {
+      p1: 'c',
+      p2: 'b',
+      p3: 'd',
+      p4: '8',
+      p5: 'falso',
+      p6: '81',
+      p7: '9',
+      p8: 'b',
+      p9: '1',
+      p10: '0',
+      p11: 'a',
+      p12: 'b',
+      p13: '10',
+      p14: '64',
+      p15: 'verdadero',
+      p16: 'a',
+      p17: '6',
+      p18: 'a',
+      p19: '144',
+      p20: 'b'
+    };
+
+    const enunciados = {
+      p1: "¿Cómo se escribe 5 × 5 × 5 en forma de potencia?",
+      p2: "¿Cuál es la base en la potencia 7⁴?",
+      p3: "¿Cuánto vale 10⁵?",
+      p4: "¿Cuál es la raíz cuadrada de 64?",
+      p5: "¿Verdadero o falso? Cualquier número elevado a 0 es 0.",
+      p6: "¿Cuánto vale 9²?",
+      p7: "¿Qué número elevado al cuadrado da 81?",
+      p8: "¿Cuál es la expresión polinómica de 3.050?",
+      p9: "¿Cuánto vale 1¹⁰?",
+      p10: "¿Cuánto vale 0⁵?",
+      p11: "¿Cuál es el valor de 2³ × 2²?",
+      p12: "¿Cuál es la raíz cuadrada aproximada de 50?",
+      p13: "¿Cuántos cuadrados perfectos hay entre 1 y 100 (incluidos)?",
+      p14: "¿Cuál es el resultado de 4³?",
+      p15: "¿Verdadero o falso? La raíz cuadrada de 0 es 0.",
+      p16: "Escribe 700.000 como potencia de base 10:",
+      p17: "¿Cuánto vale 5⁰ + 5¹?",
+      p18: "¿Cuál es la expresión polinómica de 209.506?",
+      p19: "¿Cuántas baldosas hay en una cocina cuadrada si en cada lado hay 12?",
+      p20: "¿Entre qué dos números enteros está la raíz cuadrada de 75?"
+    };
+
+    const correctasTexto = {
+      p1: "5³",
+      p2: "7",
+      p3: "100.000",
+      p4: "8",
+      p5: "Falso (cualquier número ≠0 elevado a 0 es 1)",
+      p6: "81",
+      p7: "9",
+      p8: "3×10³ + 5×10",
+      p9: "1",
+      p10: "0",
+      p11: "2⁵",
+      p12: "7",
+      p13: "10",
+      p14: "64",
+      p15: "Verdadero",
+      p16: "7×10⁵",
+      p17: "6",
+      p18: "2×10⁵ + 9×10³ + 5×10² + 6",
+      p19: "144",
+      p20: "8 y 9"
+    };
+
+    let aciertos = 0;
+    const form = document.getElementById('examen');
+    const detallesDiv = document.getElementById('detalles');
+    detallesDiv.innerHTML = '<h3>Corrección detallada:</h3>';
+
+    // Preguntas tipo radio
+    const radios = ['p1','p2','p3','p5','p8','p11','p12','p15','p16','p18','p20'];
+    for (let p of radios) {
+      const seleccionado = form.querySelector(`input[name="${p}"]:checked`);
+      const respuestaUsuario = seleccionado ? seleccionado.value : "(no respondida)";
+      const esCorrecta = respuestaUsuario === respuestas[p];
+      if (esCorrecta) aciertos++;
+      const clase = esCorrecta ? 'correcto' : 'incorrecto';
+      const simbolo = esCorrecta ? '✅' : '❌';
+      const textoCorrecto = correctasTexto[p];
+      detallesDiv.innerHTML += `<div class="detalle-item"><strong>${p.replace('p','')}.</strong> ${enunciados[p]}<br><span class="${clase}">${simbolo} Tu respuesta: ${respuestaUsuario}. ${esCorrecta ? '' : `Correcta: ${textoCorrecto}`}</span></div>`;
+    }
+
+    // Preguntas tipo texto
+    const textos = ['p4','p6','p7','p9','p10','p13','p14','p17','p19'];
+    for (let p of textos) {
+      const valor = form.querySelector(`input[name="${p}"]`).value.trim();
+      const respuestaUsuario = valor || "(no respondida)";
+      const esCorrecta = valor === respuestas[p];
+      if (esCorrecta) aciertos++;
+      const clase = esCorrecta ? 'correcto' : 'incorrecto';
+      const simbolo = esCorrecta ? '✅' : '❌';
+      const textoCorrecto = correctasTexto[p];
+      detallesDiv.innerHTML += `<div class="detalle-item"><strong>${p.replace('p','')}.</strong> ${enunciados[p]}<br><span class="${clase}">${simbolo} Tu respuesta: ${respuestaUsuario}. ${esCorrecta ? '' : `Correcta: ${textoCorrecto}`}</span></div>`;
+    }
+
+    const nota = (aciertos * 10 / 20).toFixed(1);
+    const color = nota >= 5 ? 'green' : 'red';
+    document.getElementById('resultado').innerHTML = `
+      <p>Has acertado <strong>${aciertos}</strong> de 20 preguntas.</p>
+      <p style="color:${color};">Tu nota es: <strong>${nota}</strong> sobre 10</p>
+    `;
+    document.getElementById('resultado').style.display = 'block';
+    detallesDiv.style.display = 'block';
+  }
+</script>
+
+</body>
+</html>

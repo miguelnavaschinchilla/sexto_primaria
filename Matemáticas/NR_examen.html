@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Examen: Números Romanos y Siglos – 6.º Primaria</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f5f9f8;
+      color: #263238;
+      line-height: 1.6;
+      padding: 20px;
+    }
+    header {
+      text-align: center;
+      margin-bottom: 30px;
+      padding: 15px;
+      background-color: #b2ebf2;
+      border-radius: 12px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    h1 {
+      color: #006064;
+      font-size: 1.8rem;
+    }
+    .exam {
+      background: white;
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .question {
+      margin-bottom: 25px;
+      padding-bottom: 15px;
+      border-bottom: 1px dashed #e0e0e0;
+    }
+    .question h3 {
+      margin-bottom: 10px;
+      color: #00796b;
+    }
+    input[type="text"], select {
+      padding: 8px;
+      font-size: 1rem;
+      border: 2px solid #b2dfdb;
+      border-radius: 6px;
+      width: 120px;
+      text-align: center;
+    }
+    button {
+      background-color: #00796b;
+      color: white;
+      border: none;
+      padding: 12px 24px;
+      margin-top: 20px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 1.1rem;
+      display: block;
+      margin: 30px auto 20px;
+    }
+    button:hover {
+      background-color: #004d40;
+    }
+    #result {
+      margin-top: 30px;
+      padding: 20px;
+      background-color: #e0f7fa;
+      border-radius: 10px;
+      display: none;
+    }
+    .score {
+      font-size: 1.4rem;
+      font-weight: bold;
+      color: #00695c;
+      margin-bottom: 15px;
+    }
+    .feedback-item {
+      margin: 8px 0;
+      padding: 6px;
+      border-radius: 4px;
+    }
+    .correct {
+      background-color: #e8f5e9;
+      color: #2e7d32;
+    }
+    .incorrect {
+      background-color: #ffebee;
+      color: #c62828;
+    }
+    .correct::before {
+      content: "✓ ";
+    }
+    .incorrect::before {
+      content: "✗ ";
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Examen: Números Romanos y Siglos</h1>
+    <p>6.º de Primaria – 20 preguntas</p>
+  </header>
+
+  <div class="exam" id="exam">
+    <form id="quizForm">
+      <!-- Preguntas de conversión -->
+      <div class="question">
+        <h3>1. Escribe en números romanos: 24</h3>
+        <input type="text" id="q1">
+      </div>
+      <div class="question">
+        <h3>2. Escribe en números romanos: 97</h3>
+        <input type="text" id="q2">
+      </div>
+      <div class="question">
+        <h3>3. Escribe en cifras: CMXIX</h3>
+        <input type="text" id="q3">
+      </div>
+      <div class="question">
+        <h3>4. Escribe en cifras: MMDCCCXXXIV</h3>
+        <input type="text" id="q4">
+      </div>
+      <div class="question">
+        <h3>5. Escribe en números romanos: 521</h3>
+        <input type="text" id="q5">
+      </div>
+      <div class="question">
+        <h3>6. Escribe en cifras: DIV</h3>
+        <input type="text" id="q6">
+      </div>
+      <div class="question">
+        <h3>7. Escribe en números romanos: 1492</h3>
+        <input type="text" id="q7">
+      </div>
+      <div class="question">
+        <h3>8. Escribe en cifras: MCCXL</h3>
+        <input type="text" id="q8">
+      </div>
+      <div class="question">
+        <h3>9. Escribe en números romanos: 711</h3>
+        <input type="text" id="q9">
+      </div>
+      <div class="question">
+        <h3>10. Escribe en cifras: XIX</h3>
+        <input type="text" id="q10">
+      </div>
+
+      <!-- Preguntas de reglas -->
+      <div class="question">
+        <h3>11. ¿Es correcto escribir "VV" para representar 10?</h3>
+        <select id="q11">
+          <option value="">Selecciona...</option>
+          <option value="no">No</option>
+          <option value="si">Sí</option>
+        </select>
+      </div>
+      <div class="question">
+        <h3>12. ¿Se puede escribir "IC" para representar 99?</h3>
+        <select id="q12">
+          <option value="">Selecciona...</option>
+          <option value="no">No</option>
+          <option value="si">Sí</option>
+        </select>
+      </div>
+      <div class="question">
+        <h3>13. ¿Cuál es la forma correcta de escribir 19?</h3>
+        <select id="q13">
+          <option value="">Selecciona...</option>
+          <option value="XIX">XIX</option>
+          <option value="IXX">IXX</option>
+          <option value="XVIIII">XVIIII</option>
+        </select>
+      </div>
+      <div class="question">
+        <h3>14. ¿Qué letras NO se pueden repetir?</h3>
+        <select id="q14">
+          <option value="">Selecciona...</option>
+          <option value="VLD">V, L, D</option>
+          <option value="IXC">I, X, C</option>
+          <option value="todas">Todas se pueden repetir</option>
+        </select>
+      </div>
+      <div class="question">
+        <h3>15. ¿Es válido "CXC" para 190?</h3>
+        <select id="q15">
+          <option value="">Selecciona...</option>
+          <option value="si">Sí</option>
+          <option value="no">No</option>
+        </select>
+      </div>
+      <div class="question">
+        <h3>16. ¿Qué valor tiene una raya sobre una letra?</h3>
+        <select id="q16">
+          <option value="">Selecciona...</option>
+          <option value="x1000">Multiplica por 1.000</option>
+          <option value="x100">Multiplica por 100</option>
+          <option value="x10">Multiplica por 10</option>
+        </select>
+      </div>
+
+      <!-- Preguntas de siglos -->
+      <div class="question">
+        <h3>17. ¿A qué siglo pertenece el año 1492?</h3>
+        <input type="text" id="q17" placeholder="Ej: XV">
+      </div>
+      <div class="question">
+        <h3>18. ¿A qué siglo pertenece el año 711?</h3>
+        <input type="text" id="q18">
+      </div>
+      <div class="question">
+        <h3>19. ¿En qué año termina el siglo XX?</h3>
+        <input type="text" id="q19">
+      </div>
+      <div class="question">
+        <h3>20. ¿En qué año comienza el siglo I?</h3>
+        <input type="text" id="q20">
+      </div>
+<div style="text-align: center; margin: 30px 0;">
+  <button type="button" onclick="gradeExam()">Corregir examen</button>
+   <a href="Los números romanos.html"
+     style="display: inline-block; background-color: #039be5; color: white; text-decoration: none; padding: 10px 20px; border-radius: 6px; font-weight: bold; text-align: center;">
+    📖 Volver al tema
+  </a>
+  <a href="Ìndice Matemáticas.html"
+     style="display: inline-block; background-color: #2196f3; color: white; text-decoration: none; padding: 10px 20px; border-radius: 6px; font-weight: bold; text-align: center;">
+    📚 Ir al índice
+  </a>
+</div>
+      
+    </form>
+
+    <div id="result"></div>
+  </div>
+
+  <script>
+    function normalize(str) {
+      if (typeof str !== 'string') return '';
+      return str.trim().toUpperCase().replace(/\s+/g, '');
+    }
+
+    function gradeExam() {
+      const answers = {
+        q1: 'XXIV',
+        q2: 'XCVII',
+        q3: '919',
+        q4: '2834',
+        q5: 'DXXI',
+        q6: '504',
+        q7: 'MCDXCII',
+        q8: '1240',
+        q9: 'DCCXI',
+        q10: '19',
+        q11: 'no',
+        q12: 'no',
+        q13: 'XIX',
+        q14: 'VLD',
+        q15: 'si',
+        q16: 'x1000',
+        q17: 'XV',
+        q18: 'VIII',
+        q19: '2000',
+        q20: '1'
+      };
+
+      let score = 0;
+      let feedbackHTML = '';
+
+      for (let i = 1; i <= 20; i++) {
+        const qId = 'q' + i;
+        let userAnswer = '';
+        const elem = document.getElementById(qId);
+        if (elem.tagName === 'INPUT') {
+          userAnswer = normalize(elem.value);
+        } else if (elem.tagName === 'SELECT') {
+          userAnswer = elem.value;
+        }
+
+        const correctAnswer = answers[qId];
+        let isCorrect = false;
+
+        if (i === 3 || i === 4 || i === 6 || i === 8 || i === 10 || i === 19 || i === 20) {
+          // Comparar como número
+          isCorrect = parseInt(userAnswer) === parseInt(correctAnswer);
+        } else {
+          isCorrect = userAnswer === correctAnswer;
+        }
+
+        if (isCorrect) {
+          score++;
+          feedbackHTML += `<div class="feedback-item correct">Pregunta ${i}: Correcta</div>`;
+        } else {
+          let correctDisplay = correctAnswer;
+          if (i === 3) correctDisplay = '919';
+          if (i === 4) correctDisplay = '2834';
+          if (i === 6) correctDisplay = '504';
+          if (i === 8) correctDisplay = '1240';
+          if (i === 10) correctDisplay = '19';
+          if (i === 19) correctDisplay = '2000';
+          if (i === 20) correctDisplay = '1';
+          feedbackHTML += `<div class="feedback-item incorrect">Pregunta ${i}: Incorrecta. Respuesta correcta: ${correctDisplay}</div>`;
+        }
+      }
+
+      const finalScore = (score / 20) * 10;
+      const resultDiv = document.getElementById('result');
+      resultDiv.innerHTML = `
+        <div class="score">Tu nota: ${finalScore.toFixed(1)} / 10</div>
+        <h3>Corrección detallada:</h3>
+        ${feedbackHTML}
+      `;
+      resultDiv.style.display = 'block';
+    }
+  </script>
+
+</body>
+</html>
